@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }}{% endblock title %}
+{% block page_content %}
+<div class="col-md-12 mt-5">
+     <h1>{{ post.title }}</h1>
+     <small>
+         {{ post.created_on.date }} |&nbsp;
+         Categories:&nbsp;
+         {% for category in post.categories.all %}
+         <a href="{% url 'blog_category' category.name %}">
+            {{ category.name }}
+        </a>&nbsp;
+        {% endfor %}
+    </small>
+    <p>{{ post.body | linebreaks }}</p>
+    <h3>Leave a comment:</h3>
+    <form action="/{{ post.pk }}/" method="post" class="mb-5">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">{{ form.author.label_tag }}</label> 
+            {{ form.author }}
+            {% if form.author.errors %}
+                {% for err_message in form.author.errors %}
+                    <div class="invalid-feedback">{{ err_message }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{ form.body.label_tag }}</label> 
+            {{ form.body }}
+            {% if form.body.errors %}
+                {% for err_message in form.body.errors %}
+                    <div class="invalid-feedback">{{ err_message }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <h3>Comments:</h3>
+    {% for comment in comments %}
+    <p>
+        On {{comment.created_on.date }}&nbsp;
+        <b>{{ comment.author }}</b> wrote:
+    </p>
+    <p>{{ comment.body }}</p>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock %}

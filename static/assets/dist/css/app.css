@@ -1,0 +1,22 @@
+section {
+  padding: 100px 0;
+  text-align: center;
+  background-color: green;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+section img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=app.css.map */
