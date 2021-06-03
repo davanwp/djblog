@@ -1,0 +1,1 @@
+{"version":3,"sources":["about.scss","about.css"],"names":[],"mappings":"AACI;EACI,eAAA;ACAR","file":"about.css","sourcesContent":[".about__us{\r\n    p{\r\n        font-size: 16px;\r\n    }\r\n}",".about__us p {\n  font-size: 16px;\n}"]}

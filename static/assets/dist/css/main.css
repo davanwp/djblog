@@ -1,0 +1,67 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "robotoregular";
+  src: url("../fonts/roboto-regular-webfont.eot");
+  src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "robotoregular";
+  font-size: 16px;
+  padding-bottom: 50px;
+}
+
+header {
+  background-color: lightgreen;
+  color: #fff;
+  padding: 50px 0;
+}
+header h1 {
+  font-size: 40px;
+  text-align: center;
+}
+header h1 span {
+  font-size: 36px;
+  color: green;
+}
+
+section {
+  padding: 100px 0;
+  text-align: center;
+  background-color: green;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+section img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  display: block;
+  background-color: red;
+}
+/*# sourceMappingURL=main.css.map */

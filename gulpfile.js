@@ -32,7 +32,7 @@ const css = () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(mode.production( csso() ))
-    .pipe(rename('app.css'))
+    // .pipe(rename('app.css'))
     .pipe(mode.development( sourcemaps.write('.') ))
     .pipe(dest('static/assets/dist/css'))
     .pipe(mode.development( browserSync.stream() ));
